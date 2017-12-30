@@ -1,0 +1,66 @@
+
+
+<link rel="stylesheet" href="./jotted-master/bower_components/codemirror/lib/codemirror.css">
+<script src="./jotted-master/bower_components/codemirror/lib/codemirror.js"></script>
+<script src="./jotted-master/bower_components/codemirror/mode/javascript/javascript.js"></script>
+<script src="./jotted-master/bower_components/codemirror/mode/css/css.js"></script>
+<script src="./jotted-master/bower_components/codemirror/mode/xml/xml.js"></script>
+<script src="./jotted-master/bower_components/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+
+<button id="showCodeButton" onclick="showCode()">SHOW CODE</button>
+
+<div id="jotted-demo-pen" style="height:740px; width:1000px;"></div>
+
+
+<link href="./jotted-master/jotted.css" rel="stylesheet">
+<script src="./jotted-master/jotted.js"></script>
+<script>
+  new Jotted(document.querySelector('#jotted-demo-pen'), {
+    files: [
+      {
+        type: 'html',
+        url: './mfm.html'
+      },
+      {
+        type: 'js',
+        url: './mfm.js'
+      },
+      {
+        type: 'css',
+        content: ''
+      }
+    ],
+    plugins: ['codemirror','pen','play']
+  });
+</script>
+<div id="codeCover"></div>
+
+<style>
+  #codeCover{
+    width:100%;
+    height:390px;
+    background-color:white;
+    position:relative;
+    top: -368;
+    z-index: 5;
+  }
+  #showCodeButton{
+    position:relative;
+    left:650px;
+    top:50px;
+    z-index: 4;
+    background-color:transparent;
+    color:yellow;
+    border:1px solid yellow;
+    border-radius: 30px;
+    font-size: 12px;
+  }
+
+</style>
+
+<script>
+  function showCode(){
+    document.getElementById('codeCover').style.display = 'none';
+  }
+</script>

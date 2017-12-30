@@ -1,0 +1,182 @@
+
+
+<link href="https://fonts.googleapis.com/css?family=Bangers|Barrio|Cabin+Sketch|Special+Elite|Annie+Use+Your+Telescope" rel="stylesheet">
+<canvas id="canvas" style="border:1px solid black"></canvas>
+<button id="replayButton" onClick="window.location.reload()" style="display:none;position:absolute;top:140px;left:20px;font-size:18;">Play Again</button>
+<br>
+
+<div id="startScreen" style="background-color:white;width:598;height:348;position:absolute;top:10px;left:10px;font-size:18;text-align:center;font-family:monospace;">
+  <div>
+  <h1>My Favorite Murder 2:</h1>
+  <h2>Karen and Georgia's Existential Mystery</h2>
+  <!--<img src="blockMFM.png" style="width:500px;">-->
+  <img src="blood.png">
+</div>
+  <div style="text-align:right; float:right; padding:15px;">
+    <br>A Game by Julia<br>
+    Based on the podcast by<br>
+    Karen Kilgariff & Georgia Hardstark<br><br>
+  </div>
+
+<button id="startButton" onclick="start()">Play</button>
+</div>
+
+<div id="rightBox" style="display:none; padding:10px; border:1px solid black; width:250px; height:300px; position:absolute; left:620px; top:8px; text-align:center;">
+  <div id="headPic">
+    <img src="karenHead.png" width="50px" style="float:left">
+  </div>
+  <div id="dialogBox" style="margin:15px; padding:15px; font-family:'Annie Use Your Telescope',cursive;; font-size:20px; text-align:left;"></div>
+  <button id="dialogNextButton" onclick="dialogNext()" style="font-size:20px;">. . .</button>
+</div>
+
+<div id="letterBox" style="display:none; padding:10px; width:250px; position:absolute; left:620px; top:8px;">
+  <img src="envelope.png" style="width:100px"><br><br>
+  Dear Karen,<br><br>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget tincidunt diam. Nunc varius sollicitudin congue.
+  <br><br>Aenean gravida, urna in porta fermentum, mauris lacus accumsan ante, non scelerisque mauris sem semper nulla.
+  <br><br>Duis tortor elit, varius et metus in, consequat suscipit velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+  <br><br>Maecenas volutpat bibendum mauris. Pellentesque tempor, urna eget dapibus tempor, massa metus scelerisque lorem, eget lacinia libero ipsum ut tortor.
+  <button id="letterButton" onclick="closeLetter()">X</button>
+</div>
+<img id="soundButton" src="mute.png" onclick="toggleSound()">
+<textarea id="passwordBox">Password</textarea>
+<button id="passwordSubmitButton">OK</button>
+
+<img id="wallPic" src="wall.png" style="display:none">
+<img id="shortWallPic" src="shortWall.png" style="display:none">
+<img id="squarePic" src="square.png" style="display:none">
+<img id="rectPic" src="rectangle.png" style="display:none">
+<img id="libPic" src="libraryFloor.png" style="display:none">
+<img id="doctorPic" src="doctor.png" style="display:none">
+<img id="nursePic" src="nurse.png" style="display:none">
+
+<img id="cityPic" src="cityscape.png" style="display:none">
+<img id="karenGeorgiaPic" src="karenGeorgia.png" style="display:none">
+<img id="elvisPic" src="elvis.png" style="display:none">
+<img id="cookiePic" src="cookie.png" style="display:none">
+
+<img id="mailboxPic" src="mailbox.png" style="display:none">
+
+<img id="karenHeadPic" src="karenHead.png" style="display:none">
+<img id="deadKarenHeadPic" src="redKarenHead.png" style="display:none">
+<img id="karenPic" src="karen.png" style="display:none">
+
+<img id="librarianHeadPic" src="librarianHead.png" style="display:none">
+
+
+<img id="georgiaHeadPic" src="georgiaHead.png" style="display:none">
+<img id="deadGeorgiaHeadPic" src="redGeorgiaHead.png" style="display:none">
+<img id="georgiaPic" src="georgia.png" style="display:none">
+
+<img id="motelSignPic" src="cecilSign.png" style="display:none">
+<img id="librarySignPic" src="librarySign.png" style="display:none">
+<img id="johnListPic" src="johnList.png" style="display:none">
+<img id="ramirezPic" src="ramirez.png" style="display:none">
+<img id="unterwegerPic" src="unterweger.png" style="display:none">
+<img id="pishushkinPic" src="pishushkin.png" style="display:none">
+<img id="firePic" src="fire.png" style="display:none">
+
+<img id="elisaPic" src="elisa.png" style="display:none">
+<img id="hotelDoorPic" src="cecilDoor.png" style="display:none">
+<img id="libraryDoorPic" src="libraryDoor.png" style="display:none">
+<img id="librarianPic" src="librarian.png" style="display:none">
+
+<img id="libraryBackgroundPic" src="libraryBackground.png" style="display:none">
+<img id="libraryBackground2Pic" src="libraryBackground2.png" style="display:none">
+<img id="libraryTablesPic" src="libraryTables.png" style="display:none">
+<img id="ladderPic" src="ladder.png" style="display:none">
+
+<img id="hotel1Pic" src="cecil1.png" style="display:none">
+<img id="hotel2Pic" src="hotel2.png" style="display:none">
+<img id="hotel3Pic" src="hotel3.png" style="display:none">
+<img id="hotel4Pic" src="hotel4.png" style="display:none">
+<img id="elevatorPic" src="elevator.png" style="display:none">
+<img id="waterTowerPic" src="waterTower.png" style="display:none">
+<img id="fountainPic" src="fountain.png" style="display:none">
+
+<img id="ballroomPic" src="ballroom.png" style="display:none">
+<img id="ballroom2Pic" src="ballroom2.png" style="display:none">
+<img id="skylightPic" src="grapeWindow.jpg" style="display:none">
+<img id="ballroomStairsPic" src="ballroomStairs.png" style="display:none">
+<img id="balconyPic" src="balcony.png" style="display:none">
+<img id="forestSignPic" src="forestSign.png" style="display:none">
+<img id="listSignPic" src="listSign.png" style="display:none">
+
+<img id="pineTreePic" src="pineTree.png" style="display:none">
+<img id="pineTree1Pic" src="pineTree1.png" style="display:none">
+<img id="pineTree4Pic" src="pineTree4.png" style="display:none">
+<img id="owlPic" src="owl.png" style="display:none">
+<img id="wellPic" src="well.png" style="display:none">
+<img id="gravesPic" src="graves.png" style="display:none">
+<img id="stayOutOfTheForestSignPic" src="stayOutOfTheForestSign.png" style="display:none">
+
+<img id="gratePic" src="grate.png" style="display:none">
+<img id="ratPic" src="rat.png" style="display:none">
+<img id="ratBabiesPic" src="ratBabies.png" style="display:none">
+<img id="pipesPic" src="pipes.png" style="display:none">
+<img id="pipes2Pic" src="pipes2.png" style="display:none">
+<img id="ratsPipePic" src="ratPipe.png" style="display:none">
+<img id="freeway1Pic" src="freeway1.png" style="display:none">
+<img id="freeway2Pic" src="freeway2.png" style="display:none">
+<img id="manholePic" src="manhole.png" style="display:none">
+
+<img id="homePic" src="home.png" style="display:none">
+<img id="kittenPic" src="kitten.png" style="display:none">
+<img id="mimiPic" src="mimi.png" style="display:none">
+<img id="stevenPic" src="steven.png" style="display:none">
+<img id="bigfootPic" src="bigfoot.png" style="display:none">
+
+<img id="well2Pic" src="well2.png" style="display:none">
+<img id="topiaryPic" src="topiary.png" style="display:none">
+<img id="sewerLadderPic" src="sewerLadder.png" style="display:none">
+
+<style>
+  h1{
+    font-family: 'Barrio', cursive;
+    font-size:45px;
+  }
+  h2{
+    font-family: 'Barrio', cursive;
+    font-size:30px;
+  }
+  #startButton{
+    font-size:40px;
+    border:3px solid red;
+    background-color:white;
+  }
+  #rightBox{
+    overflow-y: scroll;
+  }
+  #letterBox{
+    height:300;
+    background-color: ivory;
+    border: 1px solid orange;
+    text-align: left;
+    font-family:'Special Elite',monospace;
+    font-size: 18px;
+    overflow-y: scroll;
+  }
+  #letterButton{
+    position: absolute;
+    left:240px;
+    top:10px;
+  }
+  #soundButton{
+    width:25px;
+    position: absolute;
+    top:350;
+    left:620;
+  }
+  #passwordBox{
+    position:absolute;
+    top:345;
+    left:650
+  }
+  #passwordSubmitButton{
+    position:absolute;
+    top:345;
+    left:800;
+  }
+</style>
+
+<script src="MFM.js"></script>
