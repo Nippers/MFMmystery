@@ -3,15 +3,15 @@ var width = 600;
 var height = 367;
 var canvas = document.getElementById("canvas");
 
-canvas.width = width*2;
-canvas.height = height*2;
+canvas.width = width;
+canvas.height = height;
 
-canvas.style.width = width;
-canvas.style.height = height;
+//canvas.style.width = width;
+//canvas.style.height = height;
 
 ctx = canvas.getContext("2d");
 
-canvas.getContext("2d").scale(2,2);
+//canvas.getContext("2d").scale(2,2);
 
     var player = {
         //x: width/2,
