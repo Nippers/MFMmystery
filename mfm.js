@@ -3,8 +3,8 @@ var width = 600;
 var height = 367;
 var canvas = document.getElementById("canvas");
 
-canvas.width = width;
-canvas.height = height;
+canvas.width = width*2;
+canvas.height = height*2;
 
 canvas.style.width = width+"px";
 canvas.style.height = height+"px";
