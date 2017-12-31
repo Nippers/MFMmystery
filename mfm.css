@@ -1,0 +1,46 @@
+h1{
+  font-family: 'Barrio', cursive;
+  font-size:45px;
+}
+h2{
+  font-family: 'Barrio', cursive;
+  font-size:30px;
+}
+#startButton{
+  font-size:40px;
+  border:3px solid red;
+  background-color:white;
+}
+#rightBox{
+  overflow-y: scroll;
+}
+#letterBox{
+  height:300;
+  background-color: ivory;
+  border: 1px solid orange;
+  text-align: left;
+  font-family:'Special Elite',monospace;
+  font-size: 18px;
+  overflow-y: scroll;
+}
+#letterButton{
+  position: absolute;
+  left:240px;
+  top:10px;
+}
+#soundButton{
+  width:25px;
+  position: absolute;
+  top:350;
+  left:620;
+}
+#passwordBox{
+  position:absolute;
+  top:345;
+  left:650
+}
+#passwordSubmitButton{
+  position:absolute;
+  top:345;
+  left:800;
+}
